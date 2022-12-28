@@ -117,7 +117,7 @@ function moveUser(fn) {
     console.log(fn);
     
 };
-moveUser(move);
+moveUser(move(step, quarter));
 
 
 
