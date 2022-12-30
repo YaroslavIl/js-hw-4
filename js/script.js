@@ -107,17 +107,16 @@ exchangerUa(bank);
 let quarter = 'north';
 let step = '10';
 
-let move = function (a, b) {
-    return `Вася змістився на ${a} кроків  у напрямку ${b}`;
+function move(a, b) {
+    let moveText = `змістився на ${a} кроків  у напрямку ${b}`;
+    return moveText;
 }
-move(step, quarter);
-// console.log(move(step, quarter));
 
-function moveUser(fn) {
-    console.log(fn);
-    
+function moveUser(a, b, fn) {
+    let finalmoove = `Користувач ${fn(a, b)}`;
+    console.log(finalmoove);
 };
-moveUser(move(step, quarter));
+moveUser(step, quarter, move);
 
 
 
